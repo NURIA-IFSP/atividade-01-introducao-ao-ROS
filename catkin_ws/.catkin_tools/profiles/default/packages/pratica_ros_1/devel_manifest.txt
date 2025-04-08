@@ -1,0 +1,5 @@
+pratica_ros_1
+/workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/.private/pratica_ros_1/cmake.lock /workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/./cmake.lock
+/workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/.private/pratica_ros_1/lib/pkgconfig/pratica_ros_1.pc /workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/lib/pkgconfig/pratica_ros_1.pc
+/workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/.private/pratica_ros_1/share/pratica_ros_1/cmake/pratica_ros_1Config-version.cmake /workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/share/pratica_ros_1/cmake/pratica_ros_1Config-version.cmake
+/workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/.private/pratica_ros_1/share/pratica_ros_1/cmake/pratica_ros_1Config.cmake /workspaces/atividade-01-introducao-ao-ROS/catkin_ws/devel/share/pratica_ros_1/cmake/pratica_ros_1Config.cmake

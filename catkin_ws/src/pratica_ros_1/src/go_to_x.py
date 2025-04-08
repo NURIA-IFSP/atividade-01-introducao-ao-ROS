@@ -25,7 +25,7 @@ current = Pose2D()  # posicao atual
 desired = Pose2D()  # posicao alvo
 
 # Define o objetivo (pode ser qualquer valor de 0 a 11)
-GOAL = 10.5
+GOAL = -1.5
 
 # Coeficiente (ou ganho) para o cálculo da velocidade linear
 K1 = 1
