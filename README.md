@@ -39,3 +39,5 @@
 9) Para encerrar o programa, vá para o terminal que está rodando o lançador do programa e digite CTRL + C
 
 DICA: para manter a tela do turtlesim sempre visivel, clique na barra de titulo com o botao direito e escolha a opção "Sempre no topo"
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/NURIA-IFSP/atividade-01-introducao-ao-ROS/HEAD)
