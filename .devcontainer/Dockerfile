@@ -1,9 +1,10 @@
-FROM osrf/ros:noetic-desktop-full
+FROM intel4coro/base-notebook:20.04-noetic-vnc
 
 # Argumentos para criar usuário não-root
 ARG USERNAME=ubuntu
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Cria usuário e adiciona permissões sudo
 RUN if ! id -u $USER_UID >/dev/null 2>&1; then \
@@ -22,31 +23,31 @@ USER $USERNAME
 RUN sudo usermod --append --groups video $USERNAME
 
 # Atualiza pacotes e instala dependências ROS
-RUN sudo apt update && sudo apt upgrade -y && \
-    sudo apt install -y git nano python-is-python3 \
-    ros-noetic-ros-tutorials \
-    ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control \
-    liburdfdom-tools \
-    ros-noetic-effort-controllers \
-    ros-noetic-ros-control ros-noetic-ros-controllers \
-    python3-catkin-tools \
-    ros-noetic-moveit
+# RUN sudo apt update && sudo apt upgrade -y && \
+#     sudo apt install -y git nano python-is-python3 \
+#     ros-noetic-ros-tutorials \
+#     ros-noetic-gazebo-ros-pkgs ros-noetic-gazebo-ros-control \
+#     liburdfdom-tools \
+#     ros-noetic-effort-controllers \
+#     ros-noetic-ros-control ros-noetic-ros-controllers \
+#     python3-catkin-tools \
+#     ros-noetic-moveit
 
 # Atualiza rosdep
-RUN sudo rosdep update
+# RUN sudo rosdep update
 
 # Retorna para root para instalar ambiente gráfico
 USER root
 
 # Instala XFCE minimalista + ferramentas gráficas necessárias
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && \
-    apt-get install -y \
-    xfce4 xfce4-terminal \
-    novnc websockify xterm x11vnc wget curl net-tools \
-    python3-pip libgl1-mesa-dri libgl1-mesa-glx dbus-x11 mesa-utils \
-    x11-utils x11-xserver-utils wmctrl xdotool \
-    && apt-get clean
+
+# RUN apt-get update && \
+#     apt-get install -y \
+#     xfce4 xfce4-terminal \
+#     novnc websockify xterm x11vnc wget curl net-tools \
+#     python3-pip libgl1-mesa-dri libgl1-mesa-glx dbus-x11 mesa-utils \
+#     x11-utils x11-xserver-utils wmctrl xdotool \
+#     && apt-get clean
 
 # Keyring para o vscode
 RUN apt-get update && apt-get install -y \
